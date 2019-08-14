@@ -7,9 +7,9 @@ def data(request):
     if form.is_valid():
        data = form.cleaned_data['Data']
        print(data)
-       load = data['data', 'owner_id', 'campaigne', 'campaigne_name', 'url']
+       load = data['data']
        response_data = {}
-       response_data['data', 'owner_id', 'campaigne', 'campaigne_name', 'url'] = load
+       response_data['data'] = load
     else:
         print('invalid')
     return render(request, 'myapp/userdata.html', {'form' : form})
