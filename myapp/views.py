@@ -11,7 +11,7 @@ def data(request):
        response_data = {}
        response_data['data'] = load
     #    print(response_data)
-       return redirect(datadisplay)
+       return redirect('datadisplay')
     else:
         print('invalid')
     return render(request, 'myapp/userdata.html', {'form' : form})
